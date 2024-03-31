@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "9c4a0bbe-6104-47ce-9738-c304c0094156",
+		"name": "bazar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31581392"
+	},
+	"item": [
+		{
+			"name": "productos",
+			"item": [
+				{
+					"name": "lista Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/productos"
+					},
+					"response": []
+				},
+				{
+					"name": "producto codigo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/productos/{codigoProducto}"
+					},
+					"response": []
+				},
+				{
+					"name": "ingresar producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8080/productos/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "editar  producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Lapicera\",\r\n        \"marca\": \"Faber Castell\",\r\n        \"costo\": 10.0,\r\n        \"cantidadDisponible\": 10.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/productos/editar/{codigoProducto}"
+					},
+					"response": []
+				},
+				{
+					"name": "poco stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/productos/falta_stock"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "lista clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/cliente"
+					},
+					"response": []
+				},
+				{
+					"name": "buscar cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/cliente/{idCliente}"
+					},
+					"response": []
+				},
+				{
+					"name": "ingresar cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8080/cliente/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "modificar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nombre\": \"Lua\",\r\n    \"apellido\": \"alonso\",\r\n    \"dni\": 3246 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/cliente/editar/{idCliente}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ventas",
+			"item": [
+				{
+					"name": "lista ventas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/ventas"
+					},
+					"response": []
+				},
+				{
+					"name": "buscar ventas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/ventas/{codigoVenta}"
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar venta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/ventas/eliminar/{codigoVenta}"
+					},
+					"response": []
+				},
+				{
+					"name": "crear venta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8080/ventas/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "modificar ventas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "localhost:8080/ventas/editar/{codigoVenta}"
+					},
+					"response": []
+				},
+				{
+					"name": "productos de una venta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/ventas/productos/{codigoVenta}"
+					},
+					"response": []
+				},
+				{
+					"name": "fecha de venta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fecha_venta\": \"2024-03-03\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/ventas/fecha/{fecha_venta}"
+					},
+					"response": []
+				},
+				{
+					"name": "venta Mayor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/ventas/mayor"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
