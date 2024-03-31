@@ -1,0 +1,1 @@
+Rest API de una tienda. Conciste en un proyecto realizado con java y Spring Boot, con en el cual se maneja una tienda de bazar, y contiene validaciones (@valid y ResponseEntity) para que no se introduzcan nombres vacíos, ni en blanco.
